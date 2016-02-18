@@ -4,7 +4,7 @@
                    ..\..\FrameXML\UI.xsd">				   
 <Script File="QuickComplete.lua"/>
 <Frame name="QuickComplete" parent="UIParent" hidden="true" frameStrata="MEDIUM" inherits="BasicFrameTemplateWithInset" movable="true">
-    <Size x="325" y="100" />
+    <Size x="500" y="100" />
     <Anchors>
         <Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER" />
     </Anchors>
