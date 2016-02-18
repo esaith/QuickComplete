@@ -1,7 +1,7 @@
-﻿SLASH_BAGCLEANUP1 = "/qc";
+﻿SLASH_QUICKCLEAN1 = "/qc";
 
 
-function SlashCmdList.BAGCLEANUP(msg, editbox)
+function SlashCmdList.QUICKCLEAN(msg, editbox)
 	if QuickComplete:IsShown() then
 		QuickComplete:Hide();
 	else

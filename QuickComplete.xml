@@ -24,6 +24,7 @@
         <OnLoad function="QuickComplete_OnLoad" />
         <OnEvent function="QuickComplete_OnEvent" />
         <OnDragStart>self:StartMoving();</OnDragStart>
-        <OnDragStop>self:StopMovingOrSizing();</OnDragStop>     
+        <OnDragStop>self:StopMovingOrSizing();</OnDragStop>    
+    </Scripts>
 </Frame>
 </Ui>
