@@ -1,0 +1,9 @@
+﻿## Interface: 60200
+## Title: QuickComplete
+## Version: 1.0 
+## Notes: AutoAccepts specific quest giver
+## Author: eSaith
+## SavedVariablesPerCharacter: QuickCompleteOptions
+
+QuickComplete.lua
+QuickComplete.xml

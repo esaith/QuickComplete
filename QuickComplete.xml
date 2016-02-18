@@ -1,0 +1,29 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                   xsi:schemaLocation="http://www.blizzard.com/wow/ui/ 
+                   ..\..\FrameXML\UI.xsd">				   
+<Script File="QuickComplete.lua"/>
+<Frame name="QuickComplete" parent="UIParent" hidden="true" frameStrata="MEDIUM" inherits="BasicFrameTemplateWithInset" movable="true">
+    <Size x="325" y="100" />
+    <Anchors>
+        <Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER" />
+    </Anchors>
+    <Layers>
+        <Layer level="BACKGROUND" setAllPoints="true">
+            <Texture name="$parentBackground">
+                <Color r="1.0" g="1.0" b="1.0" a=".8" />
+            </Texture>
+            <FontString name="$parentTitle" inherits="GameFontNormal" text="Instant Quest Accept">
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP" y="-5" />
+                </Anchors>
+            </FontString>
+        </Layer>
+    </Layers>
+    <Scripts>
+        <OnLoad function="QuickComplete_OnLoad" />
+        <OnEvent function="QuickComplete_OnEvent" />
+        <OnDragStart>self:StartMoving();</OnDragStart>
+        <OnDragStop>self:StopMovingOrSizing();</OnDragStop>     
+</Frame>
+</Ui>
