@@ -9,12 +9,6 @@ function SlashCmdList.QUICKCLEAN(msg, editbox)
 	end
 end
 
-QuickCompleteOptions = 
-{
-    one = false,
-    all = false
-}
-
 function QuickComplete_OnLoad(self, event, ...)
     self:RegisterForDrag("LeftButton")
 	self:RegisterEvent("ADDON_LOADED")
@@ -27,6 +21,10 @@ end
 function QuickComplete_OnEvent(self, event, ...)                  
 	if event == "ADDON_LOADED" and ... == "QuickComplete" then
 	    self:UnregisterEvent("ADDON_LOADED")	
+        QuickCompleteOptions = QuickCompleteOptions or nil
+        if QuickCompleteOptions == nil then
+            QuickCompleteOptions = { one = false, all = false }
+        end
 
 		local btn = CreateFrame("CheckButton", "$parentCheckButton1", QuickComplete, "UICheckButtonTemplate")
 		btn:SetPoint("LEFT", "$parent", "LEFT", 60, 10);
